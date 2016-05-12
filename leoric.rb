@@ -1,13 +1,13 @@
 class Leoric < Formula
   desc "Project initialization from skeleton files"
   homepage "http://code.mrtazz.com/leoric/"
-  url "https://github.com/mrtazz/leoric/archive/0.2.2.tar.gz"
-  sha256 "9deb23d6633d553af82c0e00be5adf3feee95c4448e3958d6b069a51adb84894"
+  url "https://github.com/mrtazz/leoric/archive/0.2.3.tar.gz"
+  sha256 "1cdca050f4d9e0c4baff339562bb8c38641d9211"
 
-  depends_on "txt2man"
+  depends_on "pandoc"
 
   def install
-    system "PREFIX=#{prefix} make install"
+    system "VERSION=0.2.3 PREFIX=#{prefix} make install"
   end
 
 end
