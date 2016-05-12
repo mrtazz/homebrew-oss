@@ -2,7 +2,7 @@ class Leoric < Formula
   desc "Project initialization from skeleton files"
   homepage "http://code.mrtazz.com/leoric/"
   url "https://github.com/mrtazz/leoric/archive/0.2.2.tar.gz"
-  sha256 "09a4c1c954b1a410cbbb7713b77a94af2f9762881482748a51015f2d97898f55"
+  sha256 "9deb23d6633d553af82c0e00be5adf3feee95c4448e3958d6b069a51adb84894"
 
   depends_on "txt2man"
 
