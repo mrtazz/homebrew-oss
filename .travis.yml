@@ -1,3 +1,4 @@
 language: ruby
 os: osx
+before_script: brew update && brew install xz
 script: make ci
