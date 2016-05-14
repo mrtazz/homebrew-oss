@@ -2,6 +2,8 @@
 
 FORMULAE = $(shell ls -1 *.rb | sed 's/\.rb//g')
 
+.PHONY: ci brew-update brew-tap
+
 ci: brew-update brew-tap $(FORMULAE)
 
 brew-update:
