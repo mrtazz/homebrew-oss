@@ -1,0 +1,4 @@
+language: ruby
+os: osx
+before_install: brew update
+script: make ci
