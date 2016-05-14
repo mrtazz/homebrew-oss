@@ -11,4 +11,4 @@ brew-tap:
 	brew tap mrtazz/oss
 
 %:
-	echo brew install $@
+	brew install $@
