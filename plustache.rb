@@ -1,4 +1,4 @@
-class RestclientCpp < Formula
+class Plustache < Formula
   desc "{{mustaches}} for C++"
   homepage "http://github.com/mrtazz/plustache/"
   url "https://github.com/mrtazz/plustache/archive/0.4.0.tar.gz"
