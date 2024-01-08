@@ -5,6 +5,10 @@ class Pd < Formula
   sha256 "af61b99d2df7674efc450182d2fa3e8748375f9029bb22c67745d999397da873"
   license "MIT"
 
+  def self.version
+    "0.1.1"
+  end
+
   def self.arch
     arch = ""
     arch = "arm64" if Hardware::CPU.arm?
@@ -20,13 +24,13 @@ class Pd < Formula
   end
 
   resource "binary" do
-    url "https://github.com/mrtazz/pd/releases/download/0.1.1/pd-0.1.1.darwin.#{Pd.arch}", using: NoUnzipCurlDownloadStrategy
+    url "https://github.com/mrtazz/pd/releases/download/#{Pd.version}/pd-#{Pd.version}.darwin.#{Pd.arch}", using: NoUnzipCurlDownloadStrategy
     sha256 Pd.binary_checksum
   end
 
   def install
     man1.install "pd.1"
-    resource("binary").stage { bin.install "pd-0.1.1.darwin.#{Pd.arch}" => "pd" }
+    resource("binary").stage { bin.install "pd-#{Pd.version}.darwin.#{Pd.arch}" => "pd" }
   end
 
   test do
