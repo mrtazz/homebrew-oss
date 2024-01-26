@@ -33,3 +33,7 @@ brew-tap:
 
 %:
 	$(BREW) install mrtazz/oss/$@
+
+.PHONY: check-updates
+check-updates:
+	@for p in $(FORMULAE); do ./script/check_for_update.sh $$p ; done
