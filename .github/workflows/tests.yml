@@ -7,9 +7,13 @@ on:
 
 
 jobs:
-  unit:
-    name: unit
-    runs-on: ubuntu-latest
+  install-test:
+    name: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    runs-on: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v3
