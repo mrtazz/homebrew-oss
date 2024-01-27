@@ -1,4 +1,4 @@
-# homebrew-oss [![Build Status](https://travis-ci.org/mrtazz/homebrew-oss.svg?branch=master)](https://travis-ci.org/mrtazz/homebrew-oss)
+# homebrew-oss ![Build Status](https://github.com/mrtazz/homebrew-oss/actions/workflows/tests.yml/badge.svg)
 
 ## Overview
 This is a collection of formula for my open source projects so they are easily
