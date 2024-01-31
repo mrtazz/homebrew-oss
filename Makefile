@@ -9,8 +9,10 @@ HOMEBREW_LOCATION := /opt/homebrew
 else
 HOMEBREW_LOCATION := /usr/local
 endif
+HOMEBREW_TAP_LOCATION := $(HOMEBREW_LOCATION)/Library/Taps
 else ifeq ($(OS),Linux)
 HOMEBREW_LOCATION := /home/linuxbrew/.linuxbrew
+HOMEBREW_TAP_LOCATION := $(HOMEBREW_LOCATION)/Homebrew/Library/Taps
 endif
 
 BREW := $(HOMEBREW_LOCATION)/bin/brew
@@ -31,7 +33,7 @@ brew-update: $(BREW)
 .PHONY: brew-tap
 brew-tap:
 	$(BREW) tap mrtazz/oss
-	cd $(HOMEBREW_LOCATION)/Library/Taps/mrtazz/homebrew-oss && git checkout $(GITHUB_HEAD_REF)
+	cd $(HOMEBREW_TAP_LOCATION)/mrtazz/homebrew-oss && git checkout $(GITHUB_HEAD_REF)
 
 %:
 	$(BREW) install mrtazz/oss/$@
