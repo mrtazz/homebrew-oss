@@ -2,7 +2,7 @@
 
 ## Overview
 This is a collection of formula for my open source projects so they are easily
-installable on OSX.
+installable via homebrew.
 
 ## Installation
 ```
