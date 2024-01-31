@@ -18,8 +18,12 @@ class Pd < Formula
 
   def self.binary_checksum
     checksum = ""
-    checksum = "1fb004711e10959eeaf63d1ad7439f024a1ad6e8ddfcc769cef938effa68d962" if Hardware::CPU.arm?
-    checksum = "8b8172303ed5883063b274cf55d9db83f1b96008f301839ed52181eaeb637ede" if Hardware::CPU.intel?
+    if OS.mac?
+      checksum = "1fb004711e10959eeaf63d1ad7439f024a1ad6e8ddfcc769cef938effa68d962" if Hardware::CPU.arm?
+      checksum = "8b8172303ed5883063b274cf55d9db83f1b96008f301839ed52181eaeb637ede" if Hardware::CPU.intel?
+    elsif OS.linux?
+      checksum = "77593421d1bf58eaade795c311b120a276fb2bc868e127b6272421a7f7ca7b58"
+    end
     checksum
   end
 
