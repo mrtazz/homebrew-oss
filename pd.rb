@@ -1,12 +1,12 @@
 class Pd < Formula
   desc "PagerDuty helper tooling"
   homepage "https://github.com/mrtazz/pd"
-  url "https://github.com/mrtazz/pd/releases/download/0.1.2/pd.1", using: NoUnzipCurlDownloadStrategy
-  sha256 "e69edc54114833d5664dd988ab5206ad71617b3c78a5df79d54653327d927209"
+  url "https://github.com/mrtazz/pd/releases/download/0.1.3/pd.1", using: NoUnzipCurlDownloadStrategy
+  sha256 "fd5c5287b568cbcd25f7a11b65728f884ef9ef5466472e9708c7aad9bb0396b6"
   license "MIT"
 
   def self.version
-    "0.1.2"
+    "0.1.3"
   end
 
   def self.arch
@@ -19,10 +19,10 @@ class Pd < Formula
   def self.binary_checksum
     checksum = ""
     if OS.mac?
-      checksum = "1fb004711e10959eeaf63d1ad7439f024a1ad6e8ddfcc769cef938effa68d962" if Hardware::CPU.arm?
-      checksum = "8b8172303ed5883063b274cf55d9db83f1b96008f301839ed52181eaeb637ede" if Hardware::CPU.intel?
+      checksum = "c31c5a57ffcfe34705183b1152d7fc7875b580fd7a7d1b7cc0cd92a852457683" if Hardware::CPU.arm?
+      checksum = "38857ae49e678c05fff20055129a31185b4edaee558d90f8a49403810f2fb375" if Hardware::CPU.intel?
     elsif OS.linux?
-      checksum = "77593421d1bf58eaade795c311b120a276fb2bc868e127b6272421a7f7ca7b58"
+      checksum = "920bead790778215e3d13be8f2818d2b0541919a4b61d7f66c4365cabf57a528"
     end
     checksum
   end
