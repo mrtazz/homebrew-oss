@@ -1,12 +1,12 @@
 class Plan < Formula
   desc "Cli tool for some planning tasks"
   homepage "https://github.com/mrtazz/plan"
-  url "https://github.com/mrtazz/plan/releases/download/0.1.5/plan.1", using: NoUnzipCurlDownloadStrategy
-  sha256 "b16ddf38c20a5576f4a7a612f416bfd751d6aa1292b4e3e12bbe931ed9624372"
+  url "https://github.com/mrtazz/plan/releases/download/0.1.6/plan.1", using: NoUnzipCurlDownloadStrategy
+  sha256 "f9ddbfd6f70e2d97ef93ac477b24c3283e8b0d0cf5df6b1cafc0be0280b12155"
   license "MIT"
 
   def self.version
-    "0.1.5"
+    "0.1.6"
   end
 
   def self.arch
@@ -27,10 +27,10 @@ class Plan < Formula
   def self.binary_checksum
     checksum = ""
     if OS.mac?
-      checksum = "919918001793e72aa17e3088167e19b9f9a6ee3ad10fc597d2f5b167612ce69a" if Hardware::CPU.arm?
-      checksum = "c3ccf184381bafea0eebfcb33f77e62698ea1888d5ed83e6efd2533cd8a1f0a7" if Hardware::CPU.intel?
+      checksum = "867e17bbe9aa0a1bff365955c27cf57ad6c2ba3eb28b1514057bd02515fe7d0f" if Hardware::CPU.arm?
+      checksum = "a2095fed6a872f87400205bd970a1b3437531150e1747f89a5213851d784444c" if Hardware::CPU.intel?
     elsif OS.linux?
-      checksum = "e0db38f43d1df0e746e807cbe64d4a4ba8f4165a2b82f9d21466b11a4a49ad8a"
+      checksum = "cbc519b68bda1f0eb009d8c9bd2bbbb65127fa3b0038e68744d834571ee16933"
     end
     checksum
   end
