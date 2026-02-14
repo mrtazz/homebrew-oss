@@ -2,7 +2,6 @@ class Mae < Formula
   desc "Mail attachment extractor command-line tool"
   homepage "https://github.com/mrtazz/mae"
   url "https://github.com/mrtazz/mae/releases/download/0.1.2/mae.1", using: NoUnzipCurlDownloadStrategy
-  url "https://github.com/mrtazz/mae/archive/refs/tags/0.1.2.tar.gz"
   sha256 "05e8dd606ce33f6939aca8fa8d470ba15d4dd161b031f7fdeac31368abc3b781"
   license "MIT"
 
