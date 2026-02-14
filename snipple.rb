@@ -12,6 +12,7 @@ class Snipple < Formula
   def self.arch
     arch = ""
     arch = "arm64" if Hardware::CPU.arm?
+    arch = "amd64" if Hardware::CPU.intel?
     arch
   end
 
