@@ -15,13 +15,15 @@ HOMEBREW_LOCATION := /home/linuxbrew/.linuxbrew
 HOMEBREW_TAP_LOCATION := $(HOMEBREW_LOCATION)/Homebrew/Library/Taps
 endif
 
+CI_EXCLUDED ?= "plustache\|restclient-cpp"
+
 BREW := $(HOMEBREW_LOCATION)/bin/brew
 
 $(BREW):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o /tmp/install_homebrew.sh
 	/bin/bash < /tmp/install_homebrew.sh
 
-FORMULAE = $(shell ls -1 *.rb | sed 's/\.rb//g')
+FORMULAE = $(shell ls -1 *.rb | sed 's/\.rb//g' | grep -v '$(CI_EXCLUDED)')
 
 .PHONY: ci
 ci: brew-update brew-tap $(FORMULAE)
